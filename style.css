@@ -2,18 +2,21 @@
 
 :root{
     --ff: "Montserrat", sans-serif;
-    --colorprimary: #ffffff;
-    --colorsecondary: #000000;
-    --coloraccent: #ff9900;
+    --colorbackground: hsl(0, 0%, 0%);
+    --colortext: hsl(0, 0%, 100%);
+    --coloraccent2: hsl(36, 100%, 50%);
+    --coloraccent3: hsl(2, 100%, 54%);
     --h1: bold 64px/72px var(--ff);
+    --h2: bold 48px/64px var(--ff);
+    --h3: bold 36px/48px var(--ff);
     --p: 18px/36px var(--ff)
 }
 body{
     max-width: 1280px;
     margin: 100px auto;
     margin-bottom: 0px;
-    background-color: var(--colorsecondary);
-    color: var(--colorprimary);
+    background-color: var(--colorbackground);
+    color: var(--colortext);
     display: flex;
     gap: 40px;
     align-items: center;
@@ -36,14 +39,14 @@ body{
 }
 #menu-icon{
     font-size: 3.5rem;
-    color: var(--colorprimary);
+    color: var(--colortext);
     display: none;
     cursor: pointer;
 }
 .logo{
     max-width: 80px;
     font-size: 3rem;
-    color: var(--colorprimary);
+    color: var(--colortext);
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -54,8 +57,8 @@ body{
 span{
     background: linear-gradient(
         270deg,
-        #df8908 10%, 
-        #ff1d15 100%
+        var(--coloraccent2) 10%, 
+        var(--coloraccent3) 100%
     );
     background-clip: text;
     color: transparent;
@@ -63,7 +66,7 @@ span{
 }
 .navbar b{
     font-size: 1.3rem;
-    color: var(--colorprimary);
+    color: var(--colortext);
     margin-left: 4rem;
     font-weight: 500;
     transition: 0.3s ease-in-out;
@@ -72,8 +75,8 @@ span{
     text-wrap: nowrap;
 }
 .navbar b:hover{
-    color: var(--coloraccent);
-    border-bottom: 3px solid var(--coloraccent);
+    color: var(--coloraccent2);
+    border-bottom: 3px solid var(--coloraccent2);
 }
 .gradient-btn{
     font-size: 1.3rem;
@@ -81,13 +84,13 @@ span{
     border-radius: 3rem;
         background: linear-gradient(
         270deg,
-        #df8908 10%, 
-        #ff1d15 100%
+        var(--coloraccent2) 10%, 
+        var(--coloraccent3) 100%
     );
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    color: white;
+    color: var(--colortext);
     border: none;
     text-wrap: nowrap;
 }
@@ -121,7 +124,7 @@ section{
 .home-content h3{
     margin: 1rem 0;
     font-size: 2rem;
-    font: var(--p)
+    font: var(h3)
 }
 .home-content p{
     font-size: 1.5rem;
@@ -131,13 +134,13 @@ section{
 .home-img img{
     width: 32vw;
     border-radius: 50%;
-    box-shadow: 0 0 25px var(--coloraccent);
+    box-shadow: 0 0 25px var(--coloraccent2);
     transition: 0.4s ease-in-out;
 }
 .home-img img:hover{
-    box-shadow: 0 0 25px var(--coloraccent),
-                0 0 50px var(--coloraccent),
-                0 0 100px var(--coloraccent);
+    box-shadow: 0 0 25px var(--coloraccent2),
+                0 0 50px var(--coloraccent2),
+                0 0 100px var(--coloraccent2);
 }
 .social-icons a{
     display: inline-flex;
@@ -146,31 +149,34 @@ section{
     font-size: 3rem;
     padding: 1rem;
     background: transparent;
-    border: 2px solid var(--coloraccent);
+    border: 2px solid var(--coloraccent2);
     border-radius: 50%;
-    color: var(--colorprimary);
+    color: var(--colortext);
     margin: 3rem 0.5rem;
     transition: 0.3s ease-in-out;
     text-decoration: none;
 }
 .social-icons a:hover{
-    color: var(--colorprimary);
-    background-color: var(--coloraccent);
+    color: var(--colortext);
+    background-color: var(--coloraccent2);
     transform: scale(1.2)translateY(-5px);
-    box-shadow: 0 0 25px var(--coloraccent);
+    box-shadow: 0 0 25px var(--coloraccent2);
 }
 ::-webkit-scrollbar{
     width:10px;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: var(--coloraccent);
+    background-color: var(--coloraccent2);
     border-radius: 3px;
 }
 ::-webkit-scrollbar-track{
-    background-color: var(--colorsecondary);
+    background-color: var(--colorbackground);
 }
 .Ft-Proj{
-    background-color: var(--colorsecondary);
+    background-color: var(--colorbackground);
+    font: var(--h3);
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 .projects-box{
     display: grid;
@@ -186,40 +192,43 @@ section{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--colorsecondary);
-    border: 2px solid var(--coloraccent);
+    background-color: var(--colorbackground);
+    border: 2px solid var(--coloraccent2);
     border-radius: 3rem;
     gap: 2rem;
     padding: 5rem 2rem;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 0 5px var(--coloraccent);
+    box-shadow: 0 0 5px var(--coloraccent2);
     transition: 0.3s ease-in-out;
     max-width: 300px;
 }
 .project-card:hover{
-    box-shadow: 0 0 25px var(--coloraccent),
-                0 0 50px var(--coloraccent);
+    box-shadow: 0 0 25px var(--coloraccent2),
+                0 0 50px var(--coloraccent2);
     transform: scale(1.02);
 }
-.project-card video{
+.project-card video, 
+.project-card img{
     max-width: 300px;
     border-radius: 2rem;
     object-fit: cover;
 }
 .project-card h3{
-    font-size: 3rem;
+    font-size: 2rem;
+    font: var(--h3);
 }
 .project-card p{
     font-size: 1.6rem;
+    font: var(--p);
 }
 .contact{
-    background-color: var(--colorsecondary);
+    background-color: var(--colorbackground);
 }
 .contact h2{
     margin-bottom: 1.5rem;
-    color: var(--colorprimary);
-
+    color: var(--colortext);
+    font: var(--h2)
 }
 
 .contact form{
@@ -235,38 +244,22 @@ section{
     width: 100%;
     padding: 1.5rem;
     font-size: 1.5rem;
-    color: var(--colorprimary);
-    background-color: var(--colorsecondary);
+    color: var(--colortext);
+    background-color: var(--colorbackground);
     border-radius: 2rem;
-    border: 2px solid var(--coloraccent);
+    border: 2px solid var(--coloraccent2);
     margin: 1.5rem 0rem;
     resize: none;
     max-width: 90%;
 }
 .footer{
-    background-color: var(--colorsecondary);
+    background-color: var(--colorbackground);
     padding-bottom: 50px;
     margin-top: 0px;
     width: 100%;
 }
 .footer .social-icons{
     text-align: center;
-}
-.footer ul{
-    text-align: center;
-    font-size: 1.8rem;
-}
-.footer ul li{
-    display: inline-block;
-}
-.footer ul li a{
-    color: white;
-    border-bottom:3px solid transparent;
-    transition: 0.3s ease-in-out;
-    text-decoration: none;
-}
-.footer ul li a:hover{
-    border-bottom:3px solid var(--coloraccent);
 }
 .footer .copyright{
     text-align: center;
@@ -288,15 +281,15 @@ section{
         padding-bottom: 1.5rem;
         background-color: rgba(0, 0, 0, 0.8);
         border-bottom-left-radius: 2rem;
-        border-left: 2px solid var(--coloraccent);
-        border-bottom: 2px solid var(--coloraccent);
+        border-left: 2px solid var(--coloraccent2);
+        border-bottom: 2px solid var(--coloraccent2);
         display: none;
     }
     .navbar b{
         display: block;
         font-size: 1.4rem;
         margin: 1.3rem 1.5;
-        color: var(--colorprimary)
+        color: var(--colortext)
     }
     .navbar.active{
         display: block;
