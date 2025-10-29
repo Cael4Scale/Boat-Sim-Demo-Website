@@ -100,6 +100,7 @@ span{
     color: var(--colortext);
     border: none;
     text-wrap: nowrap;
+    text-decoration: none;
 }
 .gradient-btn:hover{
     transform: scale(1.05);
@@ -308,7 +309,7 @@ section{
     .navbar.active{
         display: block;
     }
-    .gradient-btn{
+    .header .gradient-btn{
         display: none;
     }
     .home{
