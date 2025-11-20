@@ -212,7 +212,7 @@ section{
     cursor: pointer;
     box-shadow: 0 0 5px var(--coloraccent2);
     transition: 0.3s ease-in-out;
-    max-width: 300px;
+    width: 300px;
     line-height: 1rem;
 }
 .project-card:hover{
@@ -222,11 +222,12 @@ section{
 }
 .project-card video, 
 .project-card img{
-    max-width: 300px;
+    width: 300px;
     border-radius: 2rem;
     object-fit: cover;
     justify-content: center;
     align-items: center;
+    border: 2px solid var(--coloraccent2);
 }
 .project-card h3{
     font-size: 1rem;
