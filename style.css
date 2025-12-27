@@ -214,6 +214,8 @@ section{
     transition: 0.3s ease-in-out;
     width: 300px;
     line-height: 1rem;
+    color: var(--colortext);
+    text-decoration: none;
 }
 .project-card:hover{
     box-shadow: 0 0 25px var(--coloraccent2),
@@ -283,6 +285,101 @@ section{
     margin-bottom: 0px;
     font-size: 16px;
 }
+.Project-FP{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8vw;
+    height: calc(100vh-8rem);
+    margin: 0px;
+}
+.Project-FP-Pics{
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    justify-content: start;
+    text-align: left;
+    padding: 0px;
+    max-width: 38vw;
+}
+.Project-FP-Pics video,
+.Project-FP-Pics img{
+    width: min(100%, 600px);
+    text-align: left;
+    justify-content: start;
+}
+.Project-Headline{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+.Project-Headline h1{
+    font: var(--h2);
+}
+.Project-Headline h3{
+    font: var(--p);
+}
+.Project-Text-Section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    align-items: start;
+    justify-content: center;
+    column-gap: 5vw;
+    margin: 0px;
+    margin: 0px;
+    border: 5px solid var(--coloraccent2);  
+}
+.Project-Column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 0rem;
+    justify-content: center;
+    margin: 0px;  
+}
+.Project-Text-Section img,
+.Project-Text-Section video{
+    margin: 0px;
+    max-width: 100%;
+}
+.Project-Text-Section a{
+    text-decoration: none;
+}
+.Project-Text-Section p
+{
+    align-items: center;
+    justify-content: center;
+    column-gap: 10vw;
+    display: inline-block;
+    margin: 0px;
+    max-width: 80vw;
+    font: var(--p);
+}
+.Project-Text-Section h3
+{
+    align-items: center;
+    justify-content: center;
+    column-gap: 10vw;
+    display: inline-block;
+    margin: 0px;
+    max-width: 80vw;
+    font: var(--h3);
+}
+.Small-Box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1vw;
+    width: min(500px, 100%);
+}
+.Small-Box img{
+    max-width: min(250px, 40vw);
+}
+.Heading{
+    font: var(--h2);
+}
 
 @media(max-width:1000px){
     #menu-icon{
@@ -346,5 +443,31 @@ section{
         margin: 0.5rem 0rem;
         padding: 1rem;
         font-size: 1rem;
+    }
+    .Project-FP{
+        flex-direction: column-reverse;
+        margin: 0rem 0;
+        gap: 0rem;
+        padding: 20px;
+    }
+    .Project-FP-Pics{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 0rem;
+        max-width: 100%;
+    }
+    .Project-Text-Section{
+        flex-direction: column;
+        margin: 0rem 0;
+        gap: 0rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .Project-Column{
+        align-items: center;
+        text-align: center;
+        gap: 0rem;
+        justify-content: center;
     }
 }
